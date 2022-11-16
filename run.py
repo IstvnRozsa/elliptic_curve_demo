@@ -1,10 +1,7 @@
-from coord import Coord
 from curve import Curve
 from account import Account
-from utils import _mod, _mul_inverse, _decimal2binary
+from utils import _mod, _mul_inverse
 import hashlib
-
-p = 0
 
 ec = Curve(-2, 15, 23, 4)
 print(ec.generator)

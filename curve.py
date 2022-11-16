@@ -24,8 +24,8 @@ class Curve:
 
     def _double(self, P):
         R = Coord();
-        s = _mod((3 * (P.x ** 2) + self.a) * (_mul_inverse(2 * P.y, self.order)), self.order)
-        R.x = _mod(s ** 2 - 2 * P.x, self.order)
+        s = _mod((3 * (P.x ** 2) + self.a) * (_mul_inverse(2 * P.y, self.order)), self.order) # slope of the line
+        R.x = _mod(s ** 2 - 2 * P.x, self.order) 
         R.y = _mod(s * (P.x - R.x) - P.y, self.order)
         return R
 
