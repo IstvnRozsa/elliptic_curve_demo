@@ -10,7 +10,14 @@ def _mul_inverse(num, order):
 def _decimal2binary(number):
     return bin(number).replace("0b", "")
 
+
+# y kiszamitasahoz
 def _sqrt(num, order):
     for i in range(0, order):
         if (i**2) % order == num:
             return i
+
+if __name__=="__main__":
+    print(_mod(100, 3))
+    print(100%3)
+    print(((100%3)+ 3) % 3)
